@@ -4,10 +4,13 @@ export const HeaderMain = styled.main`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: fixed;
   width: 100%;
+  top: 0;
   height: 10vh;
   background-color: #161B22;
   padding: 0 50px;
+  z-index: 99;
 `;
 
 export const HeaderLogo = styled.div`

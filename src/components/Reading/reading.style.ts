@@ -7,9 +7,9 @@ export const ReadingMain = styled(motion.div)`
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #161B22; /* Set to desired background color */
-  width: 1060px;
-  height: 600px;
+  background-color: #161B22;
+  width: 95%;
+  height: 95vh;
   border-radius: 10px;
   z-index: 1
 `;

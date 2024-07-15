@@ -9,17 +9,17 @@ function Logo() {
     },
     visible: {
       pathLength: 1,
+      fill: "#f47c27",
       transition: {
         duration: 2, // 경로 애니메이션 지속 시간
         ease: "easeInOut",
         fill: {
           delay: 1.5, // 경로 애니메이션 완료 후 fill 애니메이션 시작
           duration: 1,
-          ease: "easeInOut",
+          ease: "easeInOut"
         }
-      },
-      fill: "#f47c27"
-    }
+      }
+    },
   };
 
   return (

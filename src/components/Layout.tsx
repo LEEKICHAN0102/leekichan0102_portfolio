@@ -9,7 +9,6 @@ import Footer from "./Footer/Footer";
 const Container = styled.div`
   width: 100vw;
   min-height: 1000vh;
-  margin: 0 auto;
   background-color: #0D1117;
 `;
 

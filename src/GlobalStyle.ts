@@ -3,6 +3,7 @@ import { createGlobalStyle } from "styled-components";
 const GlobalStyle = createGlobalStyle`
 body {
   font-family: 'nunito', sans-serif;
+  background-color: #0D1117;
 }
 
 * {

@@ -9,6 +9,8 @@ function Home() {
     <HomeMain>
       <Reading />
       <Skill />
+      {/* <Project /> */}
+      {/* <Contact /> */}
     </HomeMain>
   )
 }
@@ -18,8 +20,8 @@ const HomeMain = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 150px;
   margin-top: 100px;
-  gap: 100px;
 `;
 
 export default Home;
