@@ -63,7 +63,7 @@ export const ItemContainer = styled.div`
   position: relative;
 
   img {
-    max-width: 20%; /* 이미지 요소의 최대 너비를 100px로 설정 */
+    width: 70px;
     height: 20px;
   }
 `;

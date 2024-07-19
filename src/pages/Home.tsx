@@ -1,13 +1,16 @@
 import styled from "styled-components";
 
 // components
+import About from "../components/About/About";
 import Reading from "../components/Reading/Reading";
 import Skill from "../components/Skill/Skill";
 
 function Home() {
+
   return(
     <HomeMain>
       <Reading />
+      <About />
       <Skill />
       {/* <Project /> */}
       {/* <Contact /> */}

@@ -1,26 +1,54 @@
+import { useScroll, useMotionValueEvent, useAnimation } from "framer-motion";
 import { 
-  HeaderMain,
-  HeaderLogo,
   HeaderNav,
+  HeaderLogo,
+  HeaderList,
+  ProgressBar
 } from "./header.style";
-
 import Logo from "../../assets/Logo";
 
 function Header() {
-  return(
-    <HeaderMain>
-      <HeaderLogo>
-        <Logo />
-      </HeaderLogo>
-      <HeaderNav>
-        <ul>
-          <li>Home</li>
-          <li>Skills</li>
-          <li>Projects</li>
-          <li>About</li>
-        </ul>
+  const navAnimation = useAnimation();
+  const { scrollY, scrollYProgress } = useScroll();
+
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    if (latest > 1) {
+      navAnimation.start("scroll");
+    } else {
+      navAnimation.start("top");
+    }
+  });
+
+  const navVariants = {
+    top: {
+      backgroundColor: "rgba(0,0,0,0)"
+    },
+    scroll: {
+      backgroundColor: "rgba(0,0,0,1)"
+    }
+  };
+
+  return (
+    <>
+      <ProgressBar style={{ scaleX: scrollYProgress }} />
+      <HeaderNav
+        variants={navVariants}
+        animate={navAnimation}
+        initial={"top"}
+      >
+        <HeaderLogo>
+          <Logo />
+        </HeaderLogo>
+        <HeaderList>
+          <ul>
+            <li>About Me</li>
+            <li>Skills</li>
+            <li>Projects</li>
+            <li>Contact</li>
+          </ul>
+        </HeaderList>
       </HeaderNav>
-    </HeaderMain>
+    </>
   );
 }
 
