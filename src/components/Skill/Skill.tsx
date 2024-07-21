@@ -1,3 +1,8 @@
+// libs
+import { useRef } from "react";
+import { useInView } from "framer-motion";
+
+// styles
 import {
   SkillMain,
   Text,
@@ -10,11 +15,47 @@ import {
 import SkillItem from "./SkillItem";
 
 function Skill() {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
+  const container = {
+    hidden: { opacity: 1, scale: 0 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        delayChildren: 0.3,
+        staggerChildren: 0.2
+      }
+    }
+  }
+
+  const item = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1
+    }
+  };
+
   return (
-    <SkillMain>
-      <Text>Skills</Text>
+    <SkillMain
+      ref={ref}
+      variants={container}
+      initial="hidden"
+      animate={isInView ? "visible" : "hidden"}
+    >
+      <Text 
+        style={{
+          transform: isInView ? "none" : "translateX(-200px)",
+          opacity: isInView ? 1 : 0,
+          transition: "all 0.4s 0.4s"
+        }}
+      >
+        Skills
+      </Text>
       <SkillTable>
-        <SkillList>
+        <SkillList variants={item}>
           <SkillClass>FrontEnd</SkillClass>
           <SkillItem 
             itemImage="https://img.shields.io/badge/HTML-E34F26?style=flat-square&logo=HTML5&logoColor=white"
@@ -77,7 +118,7 @@ function Skill() {
             proficiency="learning"
           />
         </SkillList>
-        <SkillList>
+        <SkillList variants={item}>
           <SkillClass>BackEnd</SkillClass>
           <SkillItem 
             itemImage="https://img.shields.io/badge/Node.Js-5FA04E?style=flat-square&logo=Node.Js&logoColor=white"
@@ -122,7 +163,7 @@ function Skill() {
             proficiency="familiar"
           />
         </SkillList>
-        <SkillList>
+        <SkillList variants={item}>
           <SkillClass>Version Control</SkillClass>
           <SkillItem 
             itemImage="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=Git&logoColor=white"

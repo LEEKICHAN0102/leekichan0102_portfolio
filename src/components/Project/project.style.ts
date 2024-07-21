@@ -1,9 +1,10 @@
+// libs
 import styled from "styled-components";
 import { motion } from "framer-motion";
 
-export const AboutMain = styled(motion.div)`
+export const ProjectMain = styled(motion.div)`
   width: 95%;
-  height: 100vh;
+  height: auto;
   border-radius: 20px;
   background-color: #161B22;
   padding: 20px;
@@ -13,8 +14,8 @@ export const AboutMain = styled(motion.div)`
 
   img {
     width: 300px;
-    height: 300px;
-    border-radius: 50%;
+    height: 400px;
+    border-radius: 20px;
   }
 `;
 

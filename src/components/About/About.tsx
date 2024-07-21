@@ -1,3 +1,8 @@
+// libs
+import { useRef } from "react";
+import { useInView } from "framer-motion";
+
+// styles
 import { 
   AboutMain,
   ImageSection,
@@ -10,19 +15,57 @@ import {
 } from "./about.style";
 
 function About() {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
+  const container = {
+    hidden: { opacity: 1, scale: 0 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        delayChildren: 0.3,
+        staggerChildren: 0.2
+      }
+    }
+  }
+
+  const item = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1
+    }
+  };
+
   return(
-    <AboutMain>
-      <Text>About Me</Text>
+    <AboutMain
+      ref={ref}
+      variants={container}
+      initial="hidden"
+      animate={isInView ? "visible" : "hidden"}
+    >
+      <Text
+        style={{
+          transform: isInView ? "none" : "translateX(-200px)",
+          opacity: isInView ? 1 : 0,
+          transition: "all 0.4s 0.4s"
+        }}
+      >About Me</Text>
       <Profile>
-        <ImageSection>
+        <ImageSection
+          variants={item}
+        >
           <img src="/LEEKICHAN_profile.png" alt="프로필 이미지" />
           <Section>
             <span>상상하는 것을 좋아하고</span>
-            <span>상상을 실현시키는 과정을 즐기는</span>
+            <span>실현 해나가는 과정을 즐기는</span>
             <span>주니어 프론트엔드 개발자 이기찬 입니다.</span>
           </Section>
         </ImageSection>
-        <TextSection>
+        <TextSection
+          variants={item}
+        >
           <Text>Introduce.</Text>
           <Section>
             <TextTitle>저는 ( ______ ) 개발자입니다.</TextTitle>

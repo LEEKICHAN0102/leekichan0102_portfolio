@@ -26,7 +26,7 @@ export const Glass = styled(motion.div)`
   cursor: grab;
 `;
 
-export const Text = styled.div`
+export const Text = styled(motion.div)`
   display: flex;
   flex-direction: column;
   z-index: 3;

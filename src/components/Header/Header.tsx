@@ -1,10 +1,13 @@
 import { useScroll, useMotionValueEvent, useAnimation } from "framer-motion";
+// import { Link } from "react-router-dom";
 import { 
   HeaderNav,
   HeaderLogo,
   HeaderList,
   ProgressBar
 } from "./header.style";
+
+// assets
 import Logo from "../../assets/Logo";
 
 function Header() {

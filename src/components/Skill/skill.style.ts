@@ -12,13 +12,13 @@ export const SkillMain = styled(motion.section)`
   gap: 30px;
 `;
 
-export const Text = styled.span`
+export const Text = styled(motion.span)`
   font-size: 24px;
   font-weight: bold;
   color: white;
 `;
 
-export const SkillTable = styled(motion.section)`
+export const SkillTable = styled.section`
   display: flex;
   justify-content: space-between;
   align-items: center;

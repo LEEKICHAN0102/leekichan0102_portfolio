@@ -1,20 +1,25 @@
+// libs
 import styled from "styled-components";
 
 // components
 import About from "../components/About/About";
+import Header from "../components/Header/Header";
 import Reading from "../components/Reading/Reading";
 import Skill from "../components/Skill/Skill";
+import Project from "../components/Project/Project";
 
 function Home() {
-
   return(
-    <HomeMain>
-      <Reading />
-      <About />
-      <Skill />
-      {/* <Project /> */}
-      {/* <Contact /> */}
-    </HomeMain>
+    <>
+      <HomeMain>
+        <Header />
+        <Reading />
+        <About />
+        <Skill />
+        <Project />
+        {/* <Contact /> */}
+      </HomeMain>
+    </>
   )
 }
 

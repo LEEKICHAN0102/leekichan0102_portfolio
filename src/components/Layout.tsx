@@ -3,7 +3,6 @@ import { Outlet, useLocation } from "react-router-dom";
 import styled from "styled-components";
 
 // components
-import Header from "./Header/Header";
 import Footer from "./Footer/Footer";
 
 const Container = styled.div`
@@ -19,7 +18,6 @@ export default function Layout() {
   }, [location]);
   return (
     <Container>
-      <Header />
       <Outlet />
       <Footer />
     </Container>
