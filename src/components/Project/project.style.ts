@@ -13,9 +13,8 @@ export const ProjectMain = styled(motion.div)`
   gap: 30px;
 
   img {
-    width: 300px;
-    height: 400px;
-    border-radius: 20px;
+    width: 400px;
+    height: 500px;
   }
 `;
 
@@ -29,7 +28,7 @@ export const Profile = styled.section`
   display: flex;
   justify-content: space-around;
   width: 100%;
-  height: 100%;
+  height: auto;
 `;
 
 export const ImageSection = styled(motion.div)`
@@ -37,18 +36,30 @@ export const ImageSection = styled(motion.div)`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #262F38;
+  background-color: #D0D1D3;
   border-radius: 20px;
   padding: 20px;
-  gap: 30px;
+  gap: 20px;
   width: 35%;
   height: inherit;
 
   span {
     font-size: 20px;
     font-weight: bold;
-    color: white;
+    color: black;
   }
+
+  p {
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+  }
+`;
+
+export const TextSectionDivider = styled.div`
+  background-color: black;
+  width: 100%;
+  height: 2px;
 `;
 
 export const TextSection = styled(motion.div)`
@@ -58,16 +69,33 @@ export const TextSection = styled(motion.div)`
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  gap: 30px;
-  background-color: #262F38;
+  background-color: #D0D1D3;
   border-radius: 20px;
   padding: 20px;
+  gap: 50px;
+
+  a {
+    color: #1D809F;
+    font-weight: bold;
+  }
+
+  p {
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+  }
+
+  span {
+    font-size: inherit;
+    font-weight: bold;
+    color: #ED3770;
+  }
 `;
 
 export const Section = styled.section`
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 10px;
 `;
 
 export const TextTitle = styled(Text)``;
@@ -76,4 +104,33 @@ export const TextList = styled.p`
   font-weight: bold;
   font-size: 16px;
   color: white;
+`;
+
+export const TableSection = styled.table`
+  display: grid;
+  grid-template-rows: repeat(1, auto);
+  align-items: center;
+  gap: 20px;
+
+  a {
+    color: #1D809F;
+    font-weight: bold;
+  }
+`;
+
+export const TableItem = styled.div`
+  display: flex;
+  font-size: 16px;
+  font-weight: bold;
+  gap: 10px;
+`;
+
+export const ItemButton = styled(motion.button)`
+  width: 150px;
+  height: 50px;
+  border-radius: 10px;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  outline: none;
 `;
