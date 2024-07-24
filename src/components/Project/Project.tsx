@@ -4,6 +4,7 @@ import { useInView } from "framer-motion";
 
 import { 
   ProjectMain,
+  ProjectBox,
   Text,
 } from "./project.style";
 
@@ -39,9 +40,11 @@ function Project () {
           transition: "all 0.4s 0.4s"
         }}
       >Projects</Text>
-      <ProjectItem name="pokehub" />
-      <ProjectItem name="pookimon" />
-      <ProjectItem name="suldaksuldak" />
+      <ProjectBox>
+        <ProjectItem name="suldaksuldak" />
+        <ProjectItem name="pokehub" />
+        <ProjectItem name="pookimon" />
+      </ProjectBox>
     </ProjectMain>
   )
 }

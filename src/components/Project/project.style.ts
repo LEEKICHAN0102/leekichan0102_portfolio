@@ -24,6 +24,12 @@ export const Text = styled(motion.span)`
   color: white;
 `;
 
+export const ProjectBox = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 200px;
+`;
+
 export const Profile = styled.section`
   display: flex;
   justify-content: space-around;

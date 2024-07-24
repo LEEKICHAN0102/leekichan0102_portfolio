@@ -24,6 +24,50 @@ function ProjectItem ({ name }: NProps) {
       opacity: 1
     }
   };
+  
+  if(name === "suldaksuldak"){
+    return(
+      <Profile>
+        <ImageSection
+          variants={item}
+        >
+          <span>술닥술닥</span>
+          <Carousel 
+            slides={[
+              "/suldaksuldak_Main.png",
+            ]}
+          />
+          <p></p>
+          <p>2024.06~中 팀 프로젝트</p>
+        </ImageSection>
+        <TextSection
+          variants={item}
+        >
+          <Section>
+            <p><span>술닥술닥</span>은 팀명 임과 동시에 프로젝트의 이름이기도 합니다.</p>
+            <p><span>술을 좋아하는 사람들을 위한 프로젝트 이며</span> 나만의 취향에 맞는 술을 추천 받기, 함께 술과 이야기를 나눌 친구를 찾거나 여러가지 이야기가 존재합니다!</p>
+            <p>현재 술닥술닥은 총 10명의 인원으로 이루어져 있으며 주기적인 온,오프라인 회의를 통해 실제 출시를 위해 개개인이 맡은 역할을 수행해나가고 있습니다.</p>
+          </Section>
+          <Section>
+            <p>담당 파트 - <span>백오피스</span></p>
+            <p>술닥술닥 백오피스를 통해 웹에서 보여지게 될 컨텐츠를 서버에 보내 저장하는 역할을 합니다. 술, 태그, 배너 등의 정보를 에디터를 통해 CRUD, 유저와 관리자 계정 관리가 가능합니다.</p>
+          </Section>
+          <TextSectionDivider />
+          <TableSection>
+            <TableItem>
+            ▶ GitHub: Private
+            </TableItem>
+            <TableItem>▶ 주 기능: 웹 컨텐츠 CRUD, 사용자 계정 관리</TableItem>
+            <TableItem>▶ FrontEnd: React, React-query, styled-component, Jotai</TableItem>
+            <TableItem>
+              <ItemButton onClick={() =>alert("ㅎㅇ")}>▶ More Detail</ItemButton>
+            </TableItem>
+          </TableSection>
+        </TextSection>
+      </Profile>
+    )
+  }
+
 
   if(name === "pokehub"){
     return(
@@ -41,7 +85,7 @@ function ProjectItem ({ name }: NProps) {
             ]}
           />
           <p>포켓몬 관련 정보 | 커뮤니티 사이트</p>
-          <p>2024.01-02 개인 프로젝트</p>
+          <p>2024.01~02 개인 프로젝트</p>
         </ImageSection>
         <TextSection
           variants={item}
