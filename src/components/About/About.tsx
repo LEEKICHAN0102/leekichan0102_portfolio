@@ -14,7 +14,11 @@ import {
   Text,
 } from "./about.style";
 
-function About() {
+interface AProps {
+  id: string;
+}
+
+function About({id}: AProps) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
@@ -40,6 +44,7 @@ function About() {
 
   return(
     <AboutMain
+      id={id}
       ref={ref}
       variants={container}
       initial="hidden"

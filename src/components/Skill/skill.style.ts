@@ -16,6 +16,10 @@ export const Text = styled(motion.span)`
   font-size: 24px;
   font-weight: bold;
   color: white;
+
+  @media screen and (min-width: ${props => props.theme.width.pc}) {
+    font-size: 36px;
+  }
 `;
 
 export const SkillTable = styled.section`
@@ -33,8 +37,12 @@ export const SkillList = styled(motion.div)`
   border-radius: 10px;
   height: 80vh;
   width: 30%;
-  padding: 20px;
+  padding-left: 30px;
   gap: 20px;
+
+  @media screen and (min-width: ${props => props.theme.width.pc}) {
+    gap: 30px;
+  }
 `;
 
 export const SkillClass = styled(Text)`
@@ -65,6 +73,11 @@ export const ItemContainer = styled.div`
   img {
     width: 70px;
     height: 20px;
+
+    @media screen and (min-width: ${props => props.theme.width.pc}) {
+      width: 90px;
+      height: 25px;
+    }
   }
 `;
 

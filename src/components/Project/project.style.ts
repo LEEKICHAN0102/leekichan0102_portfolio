@@ -7,7 +7,7 @@ export const ProjectMain = styled(motion.div)`
   height: auto;
   border-radius: 20px;
   background-color: #161B22;
-  padding: 20px;
+  padding: 30px;
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -22,6 +22,10 @@ export const Text = styled(motion.span)`
   font-size: 24px;  
   font-weight: bold;
   color: white;
+
+  @media screen and (min-width: ${props => props.theme.width.pc}) {
+    font-size: 36px;
+  }
 `;
 
 export const ProjectBox = styled.div`
@@ -44,7 +48,7 @@ export const ImageSection = styled(motion.div)`
   justify-content: center;
   background-color: #D0D1D3;
   border-radius: 20px;
-  padding: 20px;
+  padding: 30px;
   gap: 20px;
   width: 35%;
   height: inherit;
@@ -53,12 +57,20 @@ export const ImageSection = styled(motion.div)`
     font-size: 20px;
     font-weight: bold;
     color: black;
+    
+    @media screen and (min-width: ${props => props.theme.width.pc}) {
+      font-size: 28px;
+    }
   }
 
   p {
     font-size: 16px;
     font-weight: bold;
     color: black;
+
+    @media screen and (min-width: ${props => props.theme.width.pc}) {
+      font-size: 20px;
+    }
   }
 `;
 
@@ -77,7 +89,7 @@ export const TextSection = styled(motion.div)`
   justify-content: center;
   background-color: #D0D1D3;
   border-radius: 20px;
-  padding: 20px;
+  padding: 30px;
   gap: 50px;
 
   a {
@@ -89,12 +101,20 @@ export const TextSection = styled(motion.div)`
     font-size: 16px;
     font-weight: bold;
     color: black;
+
+    @media screen and (min-width: ${props => props.theme.width.pc}) {
+      font-size: 20px;
+    }
   }
 
   span {
     font-size: inherit;
     font-weight: bold;
     color: #ED3770;
+    
+    @media screen and (min-width: ${props => props.theme.width.pc}) {
+      font-size: 20px;
+    }
   }
 `;
 
@@ -102,6 +122,10 @@ export const Section = styled.section`
   display: flex;
   flex-direction: column;
   gap: 10px;
+  
+  @media screen and (min-width: ${props => props.theme.width.pc}) {
+    gap: 15px;
+  }
 `;
 
 export const TextTitle = styled(Text)``;
@@ -129,6 +153,10 @@ export const TableItem = styled.div`
   font-size: 16px;
   font-weight: bold;
   gap: 10px;
+
+  @media screen and (min-width: ${props => props.theme.width.pc}) {
+    font-size: 20px;
+  }
 `;
 
 export const ItemButton = styled(motion.button)`

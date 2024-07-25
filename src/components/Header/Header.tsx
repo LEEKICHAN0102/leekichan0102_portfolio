@@ -1,5 +1,4 @@
 import { useScroll, useMotionValueEvent, useAnimation } from "framer-motion";
-// import { Link } from "react-router-dom";
 import { 
   HeaderNav,
   HeaderLogo,
@@ -31,6 +30,16 @@ function Header() {
     }
   };
 
+  const scrollToSection = async (sectionId:string) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      const yOffset = -70; // 헤더 높이를 고려한 오프셋
+      const y = section.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      
+      window.scrollTo({ top: y, behavior: 'smooth' });
+    }
+  };
+
   return (
     <>
       <ProgressBar style={{ scaleX: scrollYProgress }} />
@@ -44,10 +53,9 @@ function Header() {
         </HeaderLogo>
         <HeaderList>
           <ul>
-            <li>About Me</li>
-            <li>Skills</li>
-            <li>Projects</li>
-            <li>Contact</li>
+            <li onClick={() => scrollToSection('about')}>About Me</li>
+            <li onClick={() => scrollToSection('skills')}>Skills</li>
+            <li onClick={() => scrollToSection('projects')}>Projects</li>
           </ul>
         </HeaderList>
       </HeaderNav>

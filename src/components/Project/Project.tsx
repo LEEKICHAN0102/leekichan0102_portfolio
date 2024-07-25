@@ -10,7 +10,11 @@ import {
 
 import ProjectItem from "./ProjectItem";
 
-function Project () {
+interface PProps {
+  id: string;
+}
+
+function Project ({id}: PProps) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
@@ -28,6 +32,7 @@ function Project () {
 
   return(
     <ProjectMain
+      id={id}
       ref={ref}
       variants={container}
       initial="hidden"

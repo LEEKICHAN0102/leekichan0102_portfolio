@@ -24,6 +24,22 @@ const Slide = styled(motion.div)`
   background-position: center;
 `;
 
+const SlideCount = styled.div`
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: gray;
+  width: 50px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+`;
+
 const Button = styled.button<{ left?: boolean }>`
   position: absolute;
   top: 50%;
@@ -64,13 +80,16 @@ function Carousel ({ slides }: SProps) {
               exit={{ opacity: 0 }}
               transition={{ duration: 0.5 }}
             >
-              <img src={slide} />
+              <img src={slide} alt={`slide-${index}`} />
             </Slide>
           )
         ))}
       </AnimatePresence>
       <Button left onClick={prevSlide}>◀</Button>
       <Button onClick={nextSlide}>▶</Button>
+      <SlideCount>
+        {currentSlide + 1} / {slides.length}
+      </SlideCount>
     </CarouselContainer>
   );
 }

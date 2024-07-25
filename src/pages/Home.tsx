@@ -14,10 +14,9 @@ function Home() {
       <HomeMain>
         <Header />
         <Reading />
-        <About />
-        <Skill />
-        <Project />
-        {/* <Contact /> */}
+        <About id="about" />
+        <Skill id="skills" />
+        <Project id="projects" />
       </HomeMain>
     </>
   )
@@ -29,7 +28,7 @@ const HomeMain = styled.div`
   align-items: center;
   justify-content: center;
   gap: 150px;
-  margin-top: 100px;
+  margin: 150px 0px;
 `;
 
 export default Home;

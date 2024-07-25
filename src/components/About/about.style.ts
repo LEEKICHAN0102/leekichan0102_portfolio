@@ -15,6 +15,11 @@ export const AboutMain = styled(motion.div)`
     width: 300px;
     height: 300px;
     border-radius: 50%;
+
+    @media screen and (min-width: ${props => props.theme.width.pc}) {
+      width: 500px;
+      height: 500px;
+    }
   }
 `;
 
@@ -22,6 +27,10 @@ export const Text = styled(motion.span)`
   font-size: 24px;  
   font-weight: bold;
   color: white;
+
+  @media screen and (min-width: ${props => props.theme.width.pc}) {
+    font-size: 36px;
+  }
 `;
 
 export const Profile = styled.section`
@@ -47,6 +56,10 @@ export const ImageSection = styled(motion.div)`
     font-size: 20px;
     font-weight: bold;
     color: white;
+    
+    @media screen and (min-width: ${props => props.theme.width.pc}) {
+      font-size: 28px;
+    }
   }
 `;
 
@@ -67,6 +80,10 @@ export const Section = styled.section`
   display: flex;
   flex-direction: column;
   gap: 5px;
+
+  @media screen and (min-width: ${props => props.theme.width.pc}) {
+    gap: 10px;
+  }
 `;
 
 export const TextTitle = styled(Text)``;
@@ -75,4 +92,8 @@ export const TextList = styled.p`
   font-weight: bold;
   font-size: 16px;
   color: white;
+
+  @media screen and (min-width: ${props => props.theme.width.pc}) {
+    font-size: 24px;
+  }
 `;

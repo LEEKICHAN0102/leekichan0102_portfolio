@@ -20,10 +20,15 @@ export const Glass = styled(motion.div)`
   opacity: 0.8;
   border-radius: 50%;
   border: 5px solid black;
-  width: 500px;
-  height: 500px;
+  min-width: 500px;
+  min-height: 500px;
   z-index: 2;
   cursor: grab;
+
+  @media screen and (min-width: ${props => props.theme.width.pc}) {
+    width: 700px;
+    height: 700px;
+  }
 `;
 
 export const Text = styled(motion.div)`
@@ -35,4 +40,8 @@ export const Text = styled(motion.div)`
   font-weight: bold;
   gap: 30px;
   color: #161B22;
+
+  @media screen and (min-width: ${props => props.theme.width.pc}) {
+    font-size: 60px;
+  }
 `;

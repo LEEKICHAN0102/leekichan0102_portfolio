@@ -14,7 +14,11 @@ import {
 // components
 import SkillItem from "./SkillItem";
 
-function Skill() {
+interface SProps {
+  id: string;
+}
+
+function Skill({id}: SProps) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
@@ -40,6 +44,7 @@ function Skill() {
 
   return (
     <SkillMain
+      id={id}
       ref={ref}
       variants={container}
       initial="hidden"

@@ -28,6 +28,7 @@ export const HeaderLogo = styled.div`
 
 export const HeaderList = styled.div`
   color: white;
+  font-weight: bold;
 
   ul {
     display: flex;
@@ -36,6 +37,10 @@ export const HeaderList = styled.div`
   
   li {
     cursor: pointer;
+  }
+
+  @media screen and (min-width: ${props => props.theme.width.pc}) {
+    font-size: 24px;
   }
 `;
 
