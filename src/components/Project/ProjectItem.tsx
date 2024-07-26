@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 import {
   Profile,
   Section,
@@ -9,14 +11,24 @@ import {
   TableItem,
 } from "./project.style";
 
+import {
+  ModalDivider,
+  ModalTitle,
+  ModalSection,
+  ModalSubTitle,
+} from "../Modal/modal.style";
+
 // components
 import Carousel from "../Carousel/Carousel";
+import Modal from "../Modal/Modal";
 
 interface NProps {
   name: string;
 }
 
 function ProjectItem ({ name }: NProps) {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   const item = {
     hidden: { y: 20, opacity: 0 },
     visible: {
@@ -62,10 +74,15 @@ function ProjectItem ({ name }: NProps) {
             <TableItem>▶ FrontEnd: React, React-query, styled-component, Jotai</TableItem>
             <TableItem>▶ Marketing: <a href="https://www.instagram.com/suldak.official/" target="_blank">술닥술닥 인스타그램</a></TableItem>
             <TableItem>
-              <ItemButton onClick={() =>alert("ㅎㅇ")}>▶ More Detail</ItemButton>
+              <ItemButton onClick={() => setIsModalOpen(true)}>▶ More Detail</ItemButton>
             </TableItem>
           </TableSection>
         </TextSection>
+
+        <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
+          <h2>More Detail</h2>
+          <p>여기에 모달 내용을 작성하세요.</p>
+        </Modal>
       </Profile>
     )
   }
@@ -116,10 +133,42 @@ function ProjectItem ({ name }: NProps) {
             <TableItem>▶ 개발 후기: <a href="https://velog.io/@rlcks01537/%ED%8F%AC%EC%BC%93%EB%AA%AC-%EB%8F%84%EA%B0%90%EC%9D%84-%EB%A7%8C%EB%93%A4%EC%96%B4%EB%B3%B4%EC%9E%90v2-FE" target="_blank">PokéHub_FE 개발 후기</a> |
             <a href="https://velog.io/@rlcks01537/%ED%8F%AC%EC%BC%93%EB%AA%AC-%EB%8F%84%EA%B0%90%EC%9D%84-%EB%A7%8C%EB%93%A4%EC%96%B4%EB%B3%B4%EC%9E%90v2-BE" target="_blank">PokéHub_BE 개발 후기</a></TableItem>
             <TableItem>
-              <ItemButton onClick={() =>alert("ㅎㅇ")}>▶ More Detail</ItemButton>
+              <ItemButton onClick={() => setIsModalOpen(true)}>▶ More Detail</ItemButton>
             </TableItem>
           </TableSection>
         </TextSection>
+
+        <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
+        <ModalTitle>PokéHub</ModalTitle>
+          <ModalDivider />
+          <ModalSection>
+            <ModalSubTitle>🔗 Deployment URL</ModalSubTitle>
+            <a href="https://pokehub-encyclopedia.vercel.app/" target="_blank">https://pokehub-encyclopedia.vercel.app/</a>
+            <ModalSubTitle>GitHub SourceCode</ModalSubTitle>
+            <a href="https://github.com/LEEKICHAN0102/pokehub_front/tree/main" target="_blank">프론트엔드 코드</a>
+            <a href="https://github.com/LEEKICHAN0102/pokehub_back/tree/main" target="_blank">백엔드 코드</a>
+          </ModalSection>
+          <ModalDivider />
+          <ModalSection>
+            <ModalSubTitle>🎨 OverView</ModalSubTitle>
+            <p><span>PokéHub</span> 프로젝트는 이전에 진행하였던 프로젝트인 <span>Pookimon</span>에서의 아쉬웠던 점을 보완하여 새롭게 진행한 프로젝트입니다.</p>
+            <p>가장 큰 차이점으로는 실제 유저가 CRUD 할 수 있는 인터페이스를 구축하였고, MongoDB를 활용하여 새로운 데이터베이스를 구축하면서 기존에 확인할 수 있던 정보에서 더 많은 정보를 확인할 수 있도록 하였습니다.</p>
+            <p>새로운 방식을 사용하는 것이 도움이 될 것 같아 무한 스크롤이 아닌 Pagination 을 적용하였으며,<a href="https://pokemonkorea.co.kr/news" target="_blank">포켓몬 코리아</a>의 웹 스크래핑을 통해 포켓몬에 관련 된 여러가지 이벤트들을 사용자가 확인 할 수 있도록 하였습니다.</p>
+          </ModalSection>
+          <ModalDivider />
+          <ModalSection>
+            <ModalSubTitle>😀 What I Learned ?</ModalSubTitle>
+            <p>이전 프로젝트인 <span>Pookimon</span>에서 개인적인 아쉬움이 많이 남았습니다. 프로젝트를 만들고 완성한 것 까지는 만족스러웠지만, 실제 사용자가 사용하기에 여러가지 제약이 있다고 생각 하였습니다.</p>
+            <p>실제 유저가 CRUD를 할 수 있는 환경이 아니라는 점. 도감이라는 컨셉에 맞지 않게 확인할 수 있는 컨텐츠가 제약적인 것. 좋지 않은 사용경험을 남길 수 있는 것등의 여러가지 아쉬운 점이 있었습니다.</p>
+            <p><span>Pookimon</span>을 완성하고 <span>PokéHub</span>를 시작하기까지의 텀 동안 혼자 몇몇개의 토이 프로젝트와 학습 그리고 도중에 있었던 팀 프로젝트를 경험등을 하면서 지금이라면 더 나은 프로젝트를 만들수 있겠다고 생각하였습니다.</p>
+          </ModalSection>
+          <ModalDivider />
+          <ModalSection>
+            <ModalSubTitle>🔧 Tech Stack</ModalSubTitle>
+            <p>FrontEnd: React, JavaScript, react-query, react-hook-form, styled-components</p>
+            <p>BackEnd: Node.js, Express, MongoDB, puppeteer, express-session</p>
+          </ModalSection>
+        </Modal>
       </Profile>
     )
   }
@@ -167,10 +216,43 @@ function ProjectItem ({ name }: NProps) {
             <a href="https://velog.io/@rlcks01537/%ED%8F%AC%EC%BC%93%EB%AA%AC-%EB%8F%84%EA%B0%90%EC%9D%84-%EB%A7%8C%EB%93%A4%EC%96%B4%EB%B3%B4%EC%9E%90-3" target="_blank">Pookimon 개발 후기_3</a>
             </TableItem>
             <TableItem>
-              <ItemButton onClick={() =>alert("ㅎㅇ")}>▶ More Detail</ItemButton>
+              <ItemButton onClick={() => setIsModalOpen(true)}>▶ More Detail</ItemButton>
             </TableItem>
           </TableSection>
         </TextSection>
+
+        <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
+          <ModalTitle>Pookimon</ModalTitle>
+          <ModalDivider />
+          <ModalSection>
+            <ModalSubTitle>🔗 Deployment URL</ModalSubTitle>
+            <a href="https://fullfeet-pookimon.netlify.app/" target="_blank">https://fullfeet-pookimon.netlify.app</a>
+          </ModalSection>
+          <ModalDivider />
+          <ModalSection>
+            <ModalSubTitle>🎨 OverView</ModalSubTitle>
+            <p><a href="https://pokeapi.co/#google_vignette" target="_blank">PokéAPI</a> RESTful API를 활용하여 프로젝트를 만들었습니다.</p>
+            <p>포켓몬과 같은 컨텐츠를 좋아하기도 하고, <span>RESTful API</span>를 적극 활용하기에 알맞은 많은 정보와 데이터 구조라는 생각이 들어 개발하게 되었습니다.</p>
+            <p>React에 아직 익숙하지 않았기에 연습을 위해 사용하였습니다. Axios를 통해 데이터를 요청하고 가져온 데이터를 상태에 저장 한 뒤, 컴포넌트 내에서 출력합니다. </p>
+            <p>react-intersection-observer 라이브러리를 사용하여 무한 스크롤을 구현, 스크롤을 통해 추가적인 정보를 확인할 수 있습니다. tailwindCSS 를 사용하여 반응형 디자인 하였고, 컨텐츠의 디테일한 정보를 Modal 창에서 출력하기 위해 tailwind 친화적인 flowbite-react를 사용하여 구현하였습니다. </p>
+          </ModalSection>
+          <ModalDivider />
+          <ModalSection>
+            <ModalSubTitle>😀 What I Learned ?</ModalSubTitle>
+            <p><span>Pookimon 프로젝트</span>는 제가 코딩을 공부하기 시작한 이후 맨 처음 자체적으로 만든 프로젝트 입니다. </p>
+            <p>많은 사람들이 그러듯 동일하게 강좌를 수강하는 사이트에서 강의를 결제하여 수강하면서 듣던 중, 직접 고민하면서 작성하는것이 아니라 알려주는 것을 그대로 작성하다보니 코딩 실력이 아니라 영문 타이핑만 빨라지는 것 같다는 생각이 들었습니다. </p>
+            <p>직접 내 것으로 만드려면 따라 만드는게 아니라 방법을 배운 뒤 내가 만들고 싶은 것을 하는게 좋겠다는 생각이 들었고 <span>Pookimon</span>을 만들게 되었습니다만, 프로젝트 자체는 사실 <span>좋은 코드라고 볼 수 없는 수준 입니다.</span> </p>
+            <p>우선 프로젝트를 구성하기 전 기획의 단계를 거치지 않아 과정에서 시간을 많이 소모하였고, 상태관리에 관해서도 몰랐기에 하나의 Hooks 안에서 모든 것을 처리하는 등의 코드를 작성하였습니다. 결과적으로 필요한 컨텐츠를 보는데 매우 오랜 시간이 걸리면서 사용자에게 좋지 않은 사용경험을 남길 수 있는 프로젝트가 되고 말았습니다.</p>
+            <p>그럼에도 불구하고 굳이 포트폴리오에 작성하게 된 이유는 <span>"나도 나만의 프로젝트를 만들 수 있구나!"</span> 라는 자신감을 가질 수 있는 중요한 경험을 하게해준, 저에게 있어 고마운 프로젝트이기 때문입니다.</p>
+            <p>특별한 기능은 없으나 당시의 저에게는 정말 산넘어산 같은 문제를 하나씩 해결해가면서 프로젝트를 만든 기억이 납니다. 결과적으로 <span>성능 개선</span> 보다는 <span>동작</span>이 우선시 된 프로젝트가 되기는 했지만 문제가 생겼을 때 해결을 위해 고민하는 과정에 대한 즐거움을 알게 되었습니다.</p>
+          </ModalSection>
+          <ModalDivider />
+          <ModalSection>
+            <ModalSubTitle>🔧 Tech Stack</ModalSubTitle>
+            <p>React, JavaScript</p>
+            <p>react-intersection-observer, flowbite-react, tailwindCss</p>
+          </ModalSection>
+        </Modal>
       </Profile>
     )
   }
