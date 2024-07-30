@@ -35,3 +35,35 @@ export const CopyEmail = styled(CopyWright)`
   color: blue;
   text-decoration: underline;
 `;
+
+export const TreeTop = styled.button<{show: boolean}>`
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background-color: #D5D1D1;
+  color: black;
+  border: none;
+  outline: none;
+  font-size: 20px;
+  font-weight: bold;
+  z-index: 1000;
+  cursor: pointer;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  &:hover {
+    background-color: #A19D9D;
+    transition: 0.3s ease-in-out;
+  }
+  opacity: ${(props) => (props.show ? 1 : 0)};
+  transform: ${(props) => (props.show ? 'translateY(0)' : 'translateY(100px)')};
+
+  @media screen and (min-width: ${props => props.theme.width.pc}) {
+    bottom: 40px;
+    right: 40px;
+    width: 80px;
+    height: 80px;
+    font-size: 36px;
+  }
+`;

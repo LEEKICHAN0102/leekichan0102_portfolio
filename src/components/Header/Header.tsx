@@ -1,4 +1,6 @@
+// libs
 import { useScroll, useMotionValueEvent, useAnimation } from "framer-motion";
+
 import { 
   HeaderNav,
   HeaderLogo,
@@ -30,11 +32,11 @@ function Header() {
     }
   };
 
-  const scrollToSection = async (sectionId:string) => {
+  const scrollToSection = async (sectionId: string) => {
     const section = document.getElementById(sectionId);
     if (section) {
       const yOffset = -70; // 헤더 높이를 고려한 오프셋
-      const y = section.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      const y = section.offsetTop + yOffset; // section.offsetTop을 사용하여 요소의 상단 위치를 직접 가져옴
       
       window.scrollTo({ top: y, behavior: 'smooth' });
     }

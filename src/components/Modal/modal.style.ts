@@ -9,7 +9,7 @@ export const ModalOverlay = styled(motion.div)`
   right: 0;
   bottom: 0;
   background: rgba(0, 0, 0, 0.5);
-  z-index: 100;
+  z-index: 1001;
 `;
 
 export const ModalHeader = styled(motion.div)`
@@ -24,6 +24,10 @@ export const ModalHeader = styled(motion.div)`
   font-weight: bold;
   font-size: 24px;
   z-index: 101;
+
+  @media screen and (min-width: ${props => props.theme.width.pc}) {
+    font-size: 36px;
+  }
 `;
 
 export const ModalContent = styled(motion.div)`
@@ -33,6 +37,8 @@ export const ModalContent = styled(motion.div)`
   width: 100vw;
   height: 100%;
   overflow-y: auto;
+
+  padding: 5% 15%;
 `;
 
 export const CloseButton = styled.button`
@@ -44,7 +50,6 @@ export const CloseButton = styled.button`
   opacity: 0.7;
   border: none;
   border-radius: 50%;
-  font-size: 20px;
   font-family: bold;
   width: 40px;
   height: 40px;
@@ -54,6 +59,14 @@ export const CloseButton = styled.button`
   &:hover {
     opacity: 1;
   }
+
+  @media screen and (min-width: ${props => props.theme.width.pc}) {
+    top: 5%;
+    right: 5%;
+    width: 60px;
+    height: 60px;
+    font-size: 30px;
+  }
 `;
 
 export const ModalTitle = styled.div`
@@ -61,10 +74,19 @@ export const ModalTitle = styled.div`
   align-items: center;
   font-weight: bold;
   font-size: 28px;
+
+  @media screen and (min-width: ${props => props.theme.width.pc}) {
+    font-size: 36px;
+  }
 `;
 
 export const ModalSubTitle = styled(ModalTitle)`
-  font-size: 20px;
+  font-size: 24px;
+  font-weight: bold;
+
+  @media screen and (min-width: ${props => props.theme.width.pc}) {
+    font-size: 28px;
+  }
 `;
 
 export const ModalDivider = styled.div`
@@ -75,10 +97,10 @@ export const ModalDivider = styled.div`
 `;
 
 export const ModalSection = styled(Section)`
-  gap: 15px;
+  gap: 20px;
 
-  font-weight: bold;
-  font-size: 18px;
+  font-weight: 600;
+  font-size: 16px;
 
   p {
     color: black;
@@ -90,5 +112,10 @@ export const ModalSection = styled(Section)`
 
   a {
     color: #1D809F;
+  }
+
+  @media screen and (min-width: ${props => props.theme.width.pc}) {
+    font-size: 24px;
+    gap: 30px;
   }
 `;

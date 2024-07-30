@@ -84,7 +84,7 @@ function Skill({id}: SProps) {
           />
           <SkillItem 
             itemImage="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=React&logoColor=000080"
-            percentage={85}
+            percentage={80}
             proficiency="familiar"
           />
           <SkillItem 
@@ -127,34 +127,34 @@ function Skill({id}: SProps) {
           <SkillClass>BackEnd</SkillClass>
           <SkillItem 
             itemImage="https://img.shields.io/badge/Node.Js-5FA04E?style=flat-square&logo=Node.Js&logoColor=white"
-            percentage={75}
+            percentage={70}
             proficiency="familiar"
           />
           <SkillItem 
             itemImage="https://img.shields.io/badge/Express-000000?style=flat-square&logo=Express&logoColor=white"
-            percentage={70}
-            proficiency="familiar"
+            percentage={60}
+            proficiency="learning"
           />
           <SkillClass>Database</SkillClass>
           <SkillItem 
             itemImage="https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=MongoDB&logoColor=white"
-            percentage={70}
-            proficiency="familiar"
-          />
-          <SkillItem 
-            itemImage="https://img.shields.io/badge/Mongoose-880000?style=flat-square&logo=Mongoose&logoColor=white"
-            percentage={70}
-            proficiency="familiar"
-          />
-          <SkillClass>Deployment</SkillClass>
-          <SkillItem 
-            itemImage="https://img.shields.io/badge/Amazon EC2-FF9900?style=flat-square&logo=Amazon-EC2&logoColor=white"
             percentage={60}
             proficiency="learning"
           />
           <SkillItem 
-            itemImage="https://img.shields.io/badge/Amazon S3-569A31?style=flat-square&logo=Amazon-S3&logoColor=white"
+            itemImage="https://img.shields.io/badge/Mongoose-880000?style=flat-square&logo=Mongoose&logoColor=white"
             percentage={60}
+            proficiency="learning"
+          />
+          <SkillClass>Deployment</SkillClass>
+          <SkillItem 
+            itemImage="https://img.shields.io/badge/Amazon EC2-FF9900?style=flat-square&logo=Amazon-EC2&logoColor=white"
+            percentage={50}
+            proficiency="learning"
+          />
+          <SkillItem 
+            itemImage="https://img.shields.io/badge/Amazon S3-569A31?style=flat-square&logo=Amazon-S3&logoColor=white"
+            percentage={50}
             proficiency="learning"
           />
           <SkillItem 
@@ -164,8 +164,8 @@ function Skill({id}: SProps) {
           />
           <SkillItem 
             itemImage="https://img.shields.io/badge/Vercel-000000?style=flat-square&logo=Vercel&logoColor=white"
-            percentage={70}
-            proficiency="familiar"
+            percentage={60}
+            proficiency="learning"
           />
         </SkillList>
         <SkillList variants={item}>

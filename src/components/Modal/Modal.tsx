@@ -70,7 +70,7 @@ function Modal({ isOpen, onClose, children }: MProps) {
           animate="visible"
           exit="exit"
         >
-          <CloseButton onClick={onClose}>X</CloseButton>
+          <CloseButton onClick={onClose}>⨉</CloseButton>
           {children}
         </ModalContent>
       </ModalOverlay>

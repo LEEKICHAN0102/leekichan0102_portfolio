@@ -24,6 +24,7 @@ export const Glass = styled(motion.div)`
   min-height: 500px;
   z-index: 2;
   cursor: grab;
+  pointer-events: auto;
 
   @media screen and (min-width: ${props => props.theme.width.pc}) {
     width: 700px;
@@ -40,6 +41,7 @@ export const Text = styled(motion.div)`
   font-weight: bold;
   gap: 30px;
   color: #161B22;
+  pointer-events: none;
 
   @media screen and (min-width: ${props => props.theme.width.pc}) {
     font-size: 60px;

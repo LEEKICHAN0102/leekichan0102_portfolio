@@ -37,7 +37,7 @@ function Logo() {
           initial="hidden"
           animate="visible"
           stroke="#f47c27"
-          strokeWidth="2"
+          strokeWidth="10"
           fill="transparent"
         />
         <motion.path d="M100 439 l0 -291 23 6 c12 3 32 6 45 6 22 0 22 2 22 120 l0 119 58 3
@@ -47,7 +47,7 @@ function Logo() {
           initial="hidden"
           animate="visible"
           stroke="#f47c27"
-          strokeWidth="2"
+          strokeWidth="10"
           fill="transparent"
         />
         <motion.path d="M370 454 l0 -276 68 6 c37 4 93 9 125 12 l57 6 0 39 0 39 -75 -7 -75
@@ -57,7 +57,7 @@ function Logo() {
           initial="hidden"
           animate="visible"
           stroke="#f47c27"
-          strokeWidth="2"
+          strokeWidth="10"
           fill="transparent"
         />
         <motion.path d="M1070 480 l0 -250 59 0 c32 0 86 3 120 6 l61 7 0 33 0 34 -75 0 -75
@@ -66,7 +66,7 @@ function Logo() {
           initial="hidden"
           animate="visible"
           stroke="#f47c27"
-          strokeWidth="2"
+          strokeWidth="10"
           fill="transparent"
         />
         <motion.path d="M1340 485 l0 -245 113 0 c61 0 117 4 123 8 5 4 10 21 10 37 l-1 30
@@ -76,7 +76,7 @@ function Logo() {
           initial="hidden"
           animate="visible"
           stroke="#f47c27"
-          strokeWidth="2"
+          strokeWidth="10"
           fill="transparent"
         />
         <motion.path d="M1630 490 l0 -240 125 0 125 0 0 35 0 35 -75 0 -75 0 0 70 0 70 60 0
@@ -86,7 +86,7 @@ function Logo() {
           initial="hidden"
           animate="visible"
           stroke="#f47c27"
-          strokeWidth="2"
+          strokeWidth="10"
           fill="transparent"
         />
         <motion.path d="M1930 490 l0 -240 45 0 45 0 0 73 c0 48 5 80 14 93 14 18 15 17 31
@@ -97,7 +97,7 @@ function Logo() {
           initial="hidden"
           animate="visible"
           stroke="#f47c27"
-          strokeWidth="2"
+          strokeWidth="10"
           fill="transparent"
         />
         <motion.path d="M2260 485 l0 -245 45 0 45 0 0 245 0 245 -45 0 -45 0 0 -245z"
@@ -105,7 +105,7 @@ function Logo() {
           initial="hidden"
           animate="visible"
           stroke="#f47c27"
-          strokeWidth="2"
+          strokeWidth="10"
           fill="transparent"
         />
         <motion.path d="M2720 481 l0 -248 31 -7 c61 -12 59 -15 59 104 l0 110 50 0 50 0 0
@@ -115,7 +115,7 @@ function Logo() {
           initial="hidden"
           animate="visible"
           stroke="#f47c27"
-          strokeWidth="2"
+          strokeWidth="10"
           fill="transparent"
         />
         <motion.path d="M3125 708 c-11 -50 -85 -492 -82 -494 2 -2 21 -6 43 -10 l41 -6 5 46
@@ -127,7 +127,7 @@ function Logo() {
           initial="hidden"
           animate="visible"
           stroke="#f47c27"
-          strokeWidth="2"
+          strokeWidth="10"
           fill="transparent"
         />
         <motion.path d="M3390 455 c0 -255 1 -275 18 -275 9 0 27 -3 39 -6 l23 -6 2 193 3
@@ -137,7 +137,7 @@ function Logo() {
           initial="hidden"
           animate="visible"
           stroke="#f47c27"
-          strokeWidth="2"
+          strokeWidth="10"
           fill="transparent"
         />
         <motion.path d="M815 204 c-93 -7 -171 -13 -172 -13 -2 -1 -3 -15 -3 -32 l0 -32 93 7
@@ -146,7 +146,7 @@ function Logo() {
           initial="hidden"
           animate="visible"
           stroke="#f47c27"
-          strokeWidth="2"
+          strokeWidth="10"
           fill="transparent"
         />
       </g>
