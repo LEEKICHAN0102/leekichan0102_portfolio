@@ -1,9 +1,14 @@
+// utils
 import GlobalStyle from "./GlobalStyle.ts";
+import theme from "./theme.ts";
+
+// libs
 import { ThemeProvider } from 'styled-components';
 import { RouterProvider } from "react-router-dom";
+
+// router
 import router from "./router/index.tsx";
 
-import theme from "./theme.ts";
 
 function App() {
   return (

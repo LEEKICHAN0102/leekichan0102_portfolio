@@ -1,6 +1,7 @@
 //libs
 import { useState, useEffect } from "react";
 
+// styles
 import {
   FooterMain,
   CopyWright,

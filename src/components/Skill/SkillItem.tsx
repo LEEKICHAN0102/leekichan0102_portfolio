@@ -1,3 +1,4 @@
+// styles
 import { 
   ItemContainer,
   PercentContainer,
@@ -6,6 +7,7 @@ import {
   PercentageText,
 } from "./skill.style";
 
+// skillItem Props
 interface IProps {
   itemImage: string;
   percentage: number;

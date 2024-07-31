@@ -1,3 +1,4 @@
+// styles
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import { Section } from "../About/about.style";

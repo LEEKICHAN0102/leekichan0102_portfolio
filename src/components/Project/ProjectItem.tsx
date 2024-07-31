@@ -1,5 +1,7 @@
+// hooks
 import { useState } from "react";
 
+// styles
 import {
   Profile,
   Section,
@@ -11,6 +13,7 @@ import {
   TableItem,
 } from "./project.style";
 
+// styles
 import {
   ModalDivider,
   ModalTitle,

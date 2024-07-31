@@ -1,9 +1,11 @@
+// styles
 import { 
   ProjectMain,
   ProjectBox,
   Text,
 } from "./project.style";
 
+// components
 import ProjectItem from "./ProjectItem";
 
 interface PProps {

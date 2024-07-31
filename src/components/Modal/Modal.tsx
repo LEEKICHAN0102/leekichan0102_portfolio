@@ -1,4 +1,4 @@
-// libs
+// hooks
 import { useEffect, ReactNode } from "react";
 
 // styles
@@ -9,6 +9,7 @@ import {
   ModalContent,
 } from "./modal.style";
 
+// Modal Detail Props
 interface MProps {
   isOpen: boolean;
   onClose: () => void;

@@ -1,4 +1,7 @@
+// hooks
 import { useRef } from "react";
+
+// styles
 import { 
   ReadingMain,
   Glass,
