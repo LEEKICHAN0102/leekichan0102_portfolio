@@ -49,8 +49,8 @@ function ProjectItem ({ name }: NProps) {
           <span>술닥술닥</span>
           <Carousel 
             slides={[
-              "/suldaksuldak_Main.png",
-              "suldaksuldak_Team.jpg",
+              "/SuldakSuldak/suldaksuldak_Main.png",
+              "/SuldakSuldak/suldaksuldak_Team.jpg",
             ]}
           />
           <p>술 러버들을 위한 정보 커뮤니티</p>
