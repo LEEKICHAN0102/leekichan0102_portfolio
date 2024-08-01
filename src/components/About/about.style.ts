@@ -25,7 +25,7 @@ export const AboutMain = styled(motion.div)`
 `;
 
 export const Text = styled(motion.span)`
-  font-size: 24px;  
+  font-size: 28px;  
   font-weight: bold;
   color: white;
 
@@ -80,7 +80,7 @@ export const TextSection = styled(motion.div)`
 export const Section = styled.section`
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 6px;
 
   @media screen and (min-width: ${props => props.theme.width.pc}) {
     gap: 10px;
@@ -91,7 +91,7 @@ export const TextTitle = styled(Text)``;
 
 export const TextList = styled.p`
   font-weight: bold;
-  font-size: 16px;
+  font-size: 18px;
   color: white;
 
   @media screen and (min-width: ${props => props.theme.width.pc}) {
