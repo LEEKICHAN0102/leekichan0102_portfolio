@@ -8,11 +8,15 @@ import {
   Text,
 } from "./reading.style";
 
-function Reading() {
+interface IProps {
+  id: string;
+}
+
+function Reading({id}: IProps) {
   const ReadingRef = useRef(null);
 
   return (
-    <ReadingMain ref={ReadingRef}>
+    <ReadingMain id={id} ref={ReadingRef}>
       <Glass drag dragConstraints={ReadingRef} />
       <Text>
         <span>Hi, There!</span>

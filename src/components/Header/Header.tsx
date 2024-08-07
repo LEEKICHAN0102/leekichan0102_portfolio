@@ -55,9 +55,10 @@ function Header() {
         </HeaderLogo>
         <HeaderList>
           <ul>
+            <li onClick={() => scrollToSection('intro')}>Intro</li>
             <li onClick={() => scrollToSection('about')}>About Me</li>
-            <li onClick={() => scrollToSection('skills')}>Skills</li>
             <li onClick={() => scrollToSection('projects')}>Projects</li>
+            <li onClick={() => scrollToSection('skills')}>Skills</li>
           </ul>
         </HeaderList>
       </HeaderNav>

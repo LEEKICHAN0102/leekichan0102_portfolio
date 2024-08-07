@@ -13,10 +13,10 @@ function Home() {
     <>
       <HomeMain>
         <Header />
-        <Reading />
+        <Reading id="intro" />
         <About id="about" />
-        <Skill id="skills" />
         <Project id="projects" />
+        <Skill id="skills" />
       </HomeMain>
     </>
   )

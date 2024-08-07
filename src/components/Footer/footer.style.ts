@@ -36,7 +36,7 @@ export const CopyEmail = styled(CopyWright)`
   text-decoration: underline;
 `;
 
-export const TreeTop = styled.button<{show: boolean}>`
+export const TreeTop = styled.button<{$show: boolean}>`
   position: fixed;
   bottom: 20px;
   right: 20px;
@@ -56,8 +56,8 @@ export const TreeTop = styled.button<{show: boolean}>`
     background-color: #A19D9D;
     transition: 0.3s ease-in-out;
   }
-  opacity: ${(props) => (props.show ? 1 : 0)};
-  transform: ${(props) => (props.show ? 'translateY(0)' : 'translateY(100px)')};
+  opacity: ${(props) => (props.$show ? 1 : 0)};
+  transform: ${(props) => (props.$show ? 'translateY(0)' : 'translateY(100px)')};
 
   @media screen and (min-width: ${props => props.theme.width.pc}) {
     bottom: 40px;
@@ -65,5 +65,15 @@ export const TreeTop = styled.button<{show: boolean}>`
     width: 80px;
     height: 80px;
     font-size: 36px;
+  }
+`;
+
+export const GitHub = styled.div`
+  width: 50px;
+  height: 50px;
+
+  img {
+    width: 100%;
+    height: 100%;
   }
 `;

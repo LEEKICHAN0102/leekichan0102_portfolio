@@ -36,7 +36,7 @@ export const SlideCount = styled.div`
   font-weight: bold;
 `;
 
-export const Button = styled.button<{ left?: boolean }>`
+export const Button = styled.button<{ $left?: boolean }>`
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -49,5 +49,5 @@ export const Button = styled.button<{ left?: boolean }>`
   cursor: pointer;
   z-index: 1;
 
-  ${(props) => props.left ? 'left: 10px;' : 'right: 10px;'}
+  ${(props) => props.$left ? 'left: 10px;' : 'right: 10px;'}
 `;

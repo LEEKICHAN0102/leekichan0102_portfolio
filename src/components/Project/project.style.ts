@@ -136,7 +136,7 @@ export const TextList = styled.p`
   color: white;
 `;
 
-export const TableSection = styled.table`
+export const TableSection = styled.section`
   display: grid;
   grid-template-rows: repeat(1, auto);
   align-items: center;

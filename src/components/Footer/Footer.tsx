@@ -7,6 +7,7 @@ import {
   CopyWright,
   CopyEmail,
   TreeTop,
+  GitHub,
 } from "./footer.style";
 
 function Footer() {
@@ -44,16 +45,18 @@ function Footer() {
   return (
     <>
       <FooterMain>
-        <a href="https://github.com/LEEKICHAN0102" target="_blank" rel="noopener noreferrer">
-          <img src="https://img.shields.io/badge/LEEKICHAN0102 GitHub-000000?style=flat-square&logo=GitHub&logoColor=ffffff" alt="GitHub" />
-        </a>
+        <GitHub>
+          <a href="https://github.com/LEEKICHAN0102" target="_blank" rel="noopener noreferrer">
+            <img src="/Skill/etc/Github-Dark.svg" />
+          </a>
+        </GitHub>
         <CopyWright>© 2024. LEEKICHAN0102. All Rights Reserved. Thanks for Visiting my portfolio!</CopyWright>
         <CopyEmail onClick={() => copyToClipboard(email)}>
           E-mail: {email}
         </CopyEmail>
       </FooterMain>
       <TreeTop
-        show={showButton}
+        $show={showButton}
         onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
       >
         ▲

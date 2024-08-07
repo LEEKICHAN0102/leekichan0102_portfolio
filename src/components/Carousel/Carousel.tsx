@@ -45,7 +45,7 @@ function Carousel ({ slides }: SProps) {
           )
         ))}
       </AnimatePresence>
-      <Button left onClick={prevSlide}>◀</Button>
+      <Button $left onClick={prevSlide}>◀</Button>
       <Button onClick={nextSlide}>▶</Button>
       <SlideCount>
         {currentSlide + 1} / {slides.length}

@@ -4,10 +4,10 @@ import { motion } from "framer-motion";
 
 export const SkillMain = styled(motion.section)`
   width: 95%;
-  height: 95vh;
+  height: auto;
   border-radius: 20px;
   background-color: #262F38;
-  padding: 20px;
+  padding: 30px;
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -25,29 +25,27 @@ export const Text = styled(motion.span)`
 
 export const SkillTable = styled.section`
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
+  gap: 30px;
 `;
 
 export const SkillList = styled(motion.div)`
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: #D0D1D3;
   border-radius: 10px;
-  height: 80vh;
-  width: 30%;
-  padding-left: 30px;
-  gap: 20px;
+  width: auto;
+  gap: 30px;
+  height: auto;
 
   @media screen and (min-width: ${props => props.theme.width.pc}) {
     gap: 30px;
   }
 `;
 
-export const SkillClass = styled(Text)`
-  color: black;
+export const SkillItemContainer = styled.div`
+  display: flex;
+  gap: 30px;
 `;
 
 export const HoverText = styled.div`
@@ -57,11 +55,37 @@ export const HoverText = styled.div`
   bottom: 120%;
   background-color: black;
   color: white;
-  padding: 5px;
-  border-radius: 3px;
+  padding: 20px;
+  border-radius: 10px;
   opacity: 0;
   transition: opacity 0.3s;
   pointer-events: none;
+  width: 250px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: bold;
+`;
+
+export const SkillIcon = styled.div`
+  width: 70px;
+  height: 70px;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+
+  &:hover ${HoverText} {
+    opacity: 1;
+  }
+`;
+
+export const SkillClass = styled(Text)`
+  color: white;
 `;
 
 export const ItemContainer = styled.div`
@@ -70,42 +94,4 @@ export const ItemContainer = styled.div`
   width: 100%;
   gap: 15px;
   position: relative;
-
-  img {
-    width: 70px;
-    height: 20px;
-
-    @media screen and (min-width: ${props => props.theme.width.pc}) {
-      width: 90px;
-      height: 25px;
-    }
-  }
-`;
-
-export const PercentContainer = styled.div`
-  display: flex;
-  align-items: center;
-  width: 60%;
-  height: 20px;
-  background-color: #e0e0e0;
-  border-radius: 5px;
-  position: relative;
-
-  &:hover ${HoverText} {
-    opacity: 1;
-  }
-`;
-
-export const PercentageBar = styled.div<{ percentage: number }>`
-  width: ${({ percentage }) => percentage}%;
-  height: 100%;
-  background-color: #4caf50;
-  border-radius: 5px;
-`;
-
-export const PercentageText = styled.span`
-  right: 10px;
-  font-size: 14px;
-  font-weight: bold;
-  color: #000;
 `;
