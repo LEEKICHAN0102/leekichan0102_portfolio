@@ -2,30 +2,32 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
 
+// for media query
+import media from "../../midea";
+
 export const ProjectMain = styled(motion.div)`
   width: 95%;
   height: auto;
   border-radius: 20px;
   background-color: #161B22;
-  padding: 30px;
+  padding: 2%;
   display: flex;
   flex-direction: column;
-  gap: 30px;
-
-  img {
-    width: 400px;
-    height: 500px;
-  }
+  gap: 100px;
 `;
 
 export const Text = styled(motion.span)`
-  font-size: 24px;  
+  font-size: 28px;
   font-weight: bold;
   color: white;
 
-  @media screen and (min-width: ${props => props.theme.width.pc}) {
-    font-size: 36px;
-  }
+  ${media.pc`
+      font-size: 36px;
+  `}
+
+  ${media.pc2`
+      font-size: 50px;
+  `}
 `;
 
 export const ProjectBox = styled.div`
@@ -48,19 +50,28 @@ export const ImageSection = styled(motion.div)`
   justify-content: center;
   background-color: #D0D1D3;
   border-radius: 20px;
-  padding: 30px;
+  padding: 2%;
   gap: 20px;
   width: 35%;
   height: inherit;
+  
+  img {
+    width: 400px;
+    height: 500px;
+  }
 
   span {
     font-size: 20px;
     font-weight: bold;
     color: black;
     
-    @media screen and (min-width: ${props => props.theme.width.pc}) {
+    ${media.pc`
       font-size: 28px;
-    }
+    `}
+
+    ${media.pc2`
+      font-size: 36px;
+    `}
   }
 
   p {
@@ -68,9 +79,13 @@ export const ImageSection = styled(motion.div)`
     font-weight: bold;
     color: black;
 
-    @media screen and (min-width: ${props => props.theme.width.pc}) {
+    ${media.pc`
       font-size: 20px;
-    }
+    `}
+
+    ${media.pc2`
+      font-size: 24px;
+    `}
   }
 `;
 
@@ -89,7 +104,7 @@ export const TextSection = styled(motion.div)`
   justify-content: center;
   background-color: #D0D1D3;
   border-radius: 20px;
-  padding: 30px;
+  padding: 2%;
   gap: 50px;
 
   a {
@@ -102,9 +117,13 @@ export const TextSection = styled(motion.div)`
     font-weight: bold;
     color: black;
 
-    @media screen and (min-width: ${props => props.theme.width.pc}) {
+    ${media.pc`
       font-size: 20px;
-    }
+    `}
+
+    ${media.pc2`
+      font-size: 24px;
+    `}
   }
 
   span {
@@ -112,9 +131,13 @@ export const TextSection = styled(motion.div)`
     font-weight: bold;
     color: #ED3770;
     
-    @media screen and (min-width: ${props => props.theme.width.pc}) {
+    ${media.pc`
       font-size: 20px;
-    }
+    `}
+
+    ${media.pc2`
+      font-size: 24px;
+    `}
   }
 `;
 
@@ -123,9 +146,13 @@ export const Section = styled.section`
   flex-direction: column;
   gap: 10px;
   
-  @media screen and (min-width: ${props => props.theme.width.pc}) {
+  ${media.pc`
     gap: 15px;
-  }
+  `}
+
+  ${media.pc2`
+    gap: 20px;
+  `}
 `;
 
 export const TextTitle = styled(Text)``;
@@ -154,9 +181,13 @@ export const TableItem = styled.div`
   font-weight: bold;
   gap: 10px;
 
-  @media screen and (min-width: ${props => props.theme.width.pc}) {
+  ${media.pc`
     font-size: 20px;
-  }
+  `}
+
+  ${media.pc2`
+    font-size: 24px;
+  `}
 `;
 
 export const ItemButton = styled(motion.button)`
@@ -167,4 +198,16 @@ export const ItemButton = styled(motion.button)`
   color: white;
   cursor: pointer;
   outline: none;
+
+  ${media.pc2`
+    width: 170px;
+    height: 60px;
+    font-size: 20px;
+  `}
+
+  ${media.pc2`
+    width: 200px;
+    height: 70px;
+    font-size: 22px;
+  `}
 `;

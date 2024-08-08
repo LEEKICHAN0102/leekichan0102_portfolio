@@ -5,7 +5,6 @@ import { motion } from "framer-motion";
 // Styled components
 export const CarouselContainer = styled.div`
   position: relative;
-  width: 100%;
   width: 400px;
   height: 500px;
   margin: auto;
@@ -14,8 +13,6 @@ export const CarouselContainer = styled.div`
 
 export const Slide = styled(motion.div)`
   position: absolute;
-  width: 100%;
-  height: 300px;
   background-size: cover;
   background-position: center;
 `;

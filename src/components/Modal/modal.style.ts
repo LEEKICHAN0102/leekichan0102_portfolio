@@ -3,6 +3,9 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 import { Section } from "../About/about.style";
 
+// for media query
+import media from "../../midea";
+
 export const ModalOverlay = styled(motion.div)`
   position: fixed;
   top: 0;
@@ -26,9 +29,13 @@ export const ModalHeader = styled(motion.div)`
   font-size: 24px;
   z-index: 101;
 
-  @media screen and (min-width: ${props => props.theme.width.pc}) {
+  ${media.pc`
     font-size: 36px;
-  }
+  `}
+
+  ${media.pc2`
+    font-size: 42px;
+  `}
 `;
 
 export const ModalContent = styled(motion.div)`
@@ -61,13 +68,21 @@ export const CloseButton = styled.button`
     opacity: 1;
   }
 
-  @media screen and (min-width: ${props => props.theme.width.pc}) {
+  ${media.pc`
     top: 5%;
     right: 5%;
     width: 60px;
     height: 60px;
     font-size: 30px;
-  }
+  `}
+
+  ${media.pc2`
+    top: 7%;
+    right: 7%;
+    width: 80px;
+    height: 80px;
+    font-size: 40px;
+  `}
 `;
 
 export const ModalTitle = styled.div`
@@ -76,24 +91,32 @@ export const ModalTitle = styled.div`
   font-weight: bold;
   font-size: 28px;
 
-  @media screen and (min-width: ${props => props.theme.width.pc}) {
+  ${media.pc`
     font-size: 36px;
-  }
+  `}
+
+  ${media.pc2`
+    font-size: 42px;
+  `}
 `;
 
 export const ModalSubTitle = styled(ModalTitle)`
   font-size: 24px;
   font-weight: bold;
 
-  @media screen and (min-width: ${props => props.theme.width.pc}) {
+  ${media.pc`
     font-size: 28px;
-  }
+  `}
+
+  ${media.pc2`
+    font-size: 32px;
+  `}
 `;
 
 export const ModalDivider = styled.div`
   background-color: gray;
   width: 100%;
-  height: 1px;
+  height: 3px;
   margin: 35px 0px;
 `;
 
@@ -115,8 +138,13 @@ export const ModalSection = styled(Section)`
     color: #1D809F;
   }
 
-  @media screen and (min-width: ${props => props.theme.width.pc}) {
+  ${media.pc`
     font-size: 24px;
     gap: 30px;
-  }
+  `}
+
+  ${media.pc2`
+    font-size: 28px;
+    gap: 40px;
+  `}
 `;

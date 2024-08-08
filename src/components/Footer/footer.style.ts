@@ -1,5 +1,8 @@
 import styled from "styled-components";
 
+// for media query
+import media from "../../midea";
+
 export const FooterMain = styled.div`
   display: flex;
   align-items: center;
@@ -11,13 +14,6 @@ export const FooterMain = styled.div`
   bottom: 0;
   z-index: 10;
   gap: 20px;
-
-  @media screen and (min-width: ${props => props.theme.width.pc}) {
-    img {
-      width: 200px;
-      height: 30px;
-    }
-  }
 `;
 
 export const CopyWright = styled.span`
@@ -25,9 +21,13 @@ export const CopyWright = styled.span`
   font-size: 12px;
   font-weight: bold;
 
-  @media screen and (min-width: ${props => props.theme.width.pc}) {
+  ${media.pc`
     font-size: 18px;
-  }
+  `}
+
+  ${media.pc2`
+    font-size: 28px;
+  `}
 `;
 
 export const CopyEmail = styled(CopyWright)`
@@ -59,21 +59,37 @@ export const TreeTop = styled.button<{$show: boolean}>`
   opacity: ${(props) => (props.$show ? 1 : 0)};
   transform: ${(props) => (props.$show ? 'translateY(0)' : 'translateY(100px)')};
 
-  @media screen and (min-width: ${props => props.theme.width.pc}) {
+  ${media.pc`
     bottom: 40px;
     right: 40px;
     width: 80px;
     height: 80px;
     font-size: 36px;
-  }
+  `}
+
+  ${media.pc2`
+    bottom: 60px;
+    right: 60px;
+    width: 120px;
+    height: 120px;
+    font-size: 52px;
+  `}
 `;
 
 export const GitHub = styled.div`
   width: 50px;
   height: 50px;
+  margin-bottom: 30px;
 
   img {
     width: 100%;
     height: 100%;
   }
+
+  ${media.pc2`
+    img {
+      width: 150%;
+      height: 150%;
+    }
+  `}
 `;

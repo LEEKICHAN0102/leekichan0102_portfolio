@@ -2,6 +2,9 @@
 import { motion } from "framer-motion";
 import styled from "styled-components";
 
+// for media query
+import media from "../../midea";
+
 export const ReadingMain = styled(motion.div)`
   position: relative;
   overflow: hidden;
@@ -27,10 +30,15 @@ export const Glass = styled(motion.div)`
   cursor: grab;
   pointer-events: auto;
 
-  @media screen and (min-width: ${props => props.theme.width.pc}) {
+  ${media.pc`
     width: 700px;
     height: 700px;
-  }
+  `}
+
+  ${media.pc2`
+    width: 1000px;
+    height: 1000px;
+  `}
 `;
 
 export const Text = styled(motion.div)`
@@ -44,7 +52,11 @@ export const Text = styled(motion.div)`
   color: #161B22;
   pointer-events: none;
 
-  @media screen and (min-width: ${props => props.theme.width.pc}) {
+  ${media.pc`
     font-size: 60px;
-  }
+  `}
+
+  ${media.pc2`
+    font-size: 90px;
+  `}
 `;

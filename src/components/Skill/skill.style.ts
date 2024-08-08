@@ -2,12 +2,15 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
 
+// for media query
+import media from "../../midea";
+
 export const SkillMain = styled(motion.section)`
   width: 95%;
   height: auto;
   border-radius: 20px;
   background-color: #262F38;
-  padding: 30px;
+  padding: 2%;
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -18,9 +21,13 @@ export const Text = styled(motion.span)`
   font-weight: bold;
   color: white;
 
-  @media screen and (min-width: ${props => props.theme.width.pc}) {
+  ${media.pc`
     font-size: 36px;
-  }
+  `}
+
+  ${media.pc2`
+    font-size: 50px;
+  `}
 `;
 
 export const SkillTable = styled.section`
@@ -28,6 +35,14 @@ export const SkillTable = styled.section`
   flex-direction: column;
   align-items: center;
   gap: 30px;
+
+  ${media.pc`
+    gap: 40px;
+  `}
+
+  ${media.pc2`
+    gap: 50px;
+  `}
 `;
 
 export const SkillList = styled(motion.div)`
@@ -38,9 +53,13 @@ export const SkillList = styled(motion.div)`
   gap: 30px;
   height: auto;
 
-  @media screen and (min-width: ${props => props.theme.width.pc}) {
-    gap: 30px;
-  }
+  ${media.pc`
+    gap: 40px;
+  `}
+
+  ${media.pc2`
+    gap: 50px;
+  `}
 `;
 
 export const SkillItemContainer = styled.div`
@@ -68,11 +87,33 @@ export const HoverText = styled.div`
   padding: 10px;
   font-size: 16px;
   font-weight: bold;
+
+  ${media.pc`
+    width: 300px;
+    height: 150px;
+    font-size: 20px;
+  `}
+
+  ${media.pc2`
+    width: 400px;
+    height: 200px;
+    font-size: 24px;
+  `}
 `;
 
 export const SkillIcon = styled.div`
   width: 70px;
   height: 70px;
+
+  ${media.pc`
+    width: 100px;
+    height: 100px;
+  `}
+
+  ${media.pc2`
+    width: 130px;
+    height: 130px;
+  `}
 
   img {
     width: 100%;

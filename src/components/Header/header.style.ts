@@ -2,6 +2,9 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
 
+// for media query
+import media from "../../midea";
+
 export const HeaderNav = styled(motion.nav)`
   display: flex;
   align-items: center;
@@ -40,22 +43,15 @@ export const HeaderList = styled.div`
     cursor: pointer;
   }
 
-  @media screen and (min-width: ${props => props.theme.width.pc}) {
-    font-size: 24px;
-  }
+  ${media.pc`
+    font-size: 28px;
+  `}
+
+  ${media.pc2`
+    font-size: 36px;
+  `}
 `;
 
-export const Circle = styled(motion.span)`
-  position: absolute;
-  width: 40px;
-  height: 1px;
-  border-radius: 5px;
-  bottom: -5px;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  background-color: ${(props) => props.theme.red};
-`;
 
 export const ProgressBar = styled(motion.div)`
   position: fixed;
