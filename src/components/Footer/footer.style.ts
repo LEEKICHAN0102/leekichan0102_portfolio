@@ -79,17 +79,25 @@ export const TreeTop = styled.button<{$show: boolean}>`
 export const GitHub = styled.div`
   width: 50px;
   height: 50px;
-  margin-bottom: 30px;
 
   img {
     width: 100%;
     height: 100%;
   }
 
+  ${media.pc`
+    img {
+      width: 125%;
+      height: 125%;
+    }
+    margin-bottom: 20px;
+  `}
+
   ${media.pc2`
     img {
       width: 150%;
       height: 150%;
     }
+    margin-bottom: 30px;
   `}
 `;
