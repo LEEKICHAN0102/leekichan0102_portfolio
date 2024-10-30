@@ -17,6 +17,7 @@ function Project ({id}: PProps) {
     <ProjectMain id={id}>
       <Text>Projects</Text>
       <ProjectBox>
+        <ProjectItem name="maplessakssak" />
         <ProjectItem name="suldaksuldak" />
         <ProjectItem name="pokehub" />
         <ProjectItem name="pookimon" />
