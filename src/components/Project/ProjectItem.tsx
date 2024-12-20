@@ -255,8 +255,7 @@ function ProjectItem ({ name }: NProps) {
           <ModalSection>
             <ModalSubTitle>🔗 Deployment URL</ModalSubTitle>
             <a href="https://pokehub-encyclopedia.vercel.app/" target="_blank">https://pokehub-encyclopedia.vercel.app/</a>
-            <p>↪ AWS EC2로 배포한 BE 서버가 프리티어 기간이 끝나면서 비용 문제로 인해 중지하게 되면서 사용할 수 있는 콘텐츠가 제한적이게 되었습니다. 불편하시겠지만 로컬에서 실행해 주시면 감사드리겠습니다. 😪
-            </p>
+            
             <ModalSubTitle>GitHub SourceCode</ModalSubTitle>
             <a href="https://github.com/LEEKICHAN0102/pokehub_front/tree/main" target="_blank">프론트엔드 코드</a>
             <a href="https://github.com/LEEKICHAN0102/pokehub_back/tree/main" target="_blank">백엔드 코드</a>
